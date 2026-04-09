@@ -1,0 +1,27 @@
+{
+  "name": "Learning Java",
+  "image": "mcr.microsoft.com/devcontainers/java:1-23-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "23",
+      "jdkDistro": "ms"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-23",
+            "default": true
+          }
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "java -version"
+}
